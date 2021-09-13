@@ -1,5 +1,5 @@
 'use strict';
-
+alert('Seja bem vindo! Esse é um slideshow no estilo carrosel feito em HTML, CSS e JS Puro. Se estiver visualizando em um aparelho Mobile, favor mudar a orientação para PAISAGEM.')
 const images = [
     { 'id': '0', 'url':'./img/dbz0.gif'},
     { 'id': '1', 'url':'./img/dbz0.jpg'},
