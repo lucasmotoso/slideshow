@@ -1,6 +1,7 @@
 'use strict';
 
 const images = [
+    { 'id': '0', 'url':'./img/dbz0.gif'},
     { 'id': '1', 'url':'./img/dbz0.jpg'},
     { 'id': '2', 'url':'./img/dbz1.jpg'},
     { 'id': '3', 'url':'./img/dbz2.jpg'},
@@ -13,6 +14,11 @@ const images = [
     { 'id': '10', 'url':'./img/dbz9.jpg'},
     { 'id': '11', 'url':'./img/dbz10.jpg'},
     { 'id': '12', 'url':'./img/dbz11.jpg'},
+    { 'id': '13', 'url':'./img/dbz12.jpg'},
+    { 'id': '14', 'url':'./img/dbz13.jpg'},
+    { 'id': '15', 'url':'./img/dbz14.jpg'},
+    { 'id': '16', 'url':'./img/dbz1.gif'},
+    { 'id': '17', 'url':'./img/dbz2.gif'},
 ]
 
 const containerItems = document.querySelector('#container-items');
@@ -43,11 +49,26 @@ const previous = () => {
     items = document.querySelectorAll('.item');
 }
 
-const next = () => {
+
+let next =  () => {
+    
     const lastItem = items[items.length - 1];
     containerItems.insertBefore(lastItem, items[0]);
     items = document.querySelectorAll('.item');
+    
+}
+let play =  () => {
+    
+    containerItems.appendChild(items[0]);
+    items = document.querySelectorAll('.item');
+    
 }
 
-document.querySelector('#previous').addEventListener('click', next)
+
+
+
+
+document.querySelector('#previous').addEventListener('click',next)
 document.querySelector('#next').addEventListener('click', previous)
+document.querySelector('#play').addEventListener('click', setInterval(play, 10000))
+
